@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
     {
         globalres = getVolumes(i);
         if (my_rank==0)
-        printf("Volume %d Dimension sphere %f\n", i, pow(2.0, i) * (globalres / (iterations*Procs)));
+        printf("%d-dimensional sphere value = %f\n", i, pow(2.0, i) * (globalres / (iterations*Procs)));
     }
 }
 
