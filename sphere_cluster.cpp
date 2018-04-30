@@ -12,7 +12,7 @@
 //void srand();
 double drand48();
 
-#define iterations 25000000
+#define iterations 2500000
 
 double getVolumes(int n)
 {
@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
     {
         globalres = getVolumes(i);
         if (my_rank==0)
-        printf("Объем %d-мерной сферы равен %f\n", i, pow(2.0, i) * (globalres / (iterations*Procs)));
+        printf("Volume %d Dimension sphere %f\n", i, pow(2.0, i) * (globalres / (iterations*Procs)));
     }
 }
 
